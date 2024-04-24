@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const API_URL = "https://projectsengine.com/wp-json/wp/v2/posts?slug=";
+const API_URL = `${process.env.REACT_APP_WEBSITE}wp-json/wp/v2/posts?slug=`;
 
 export function Single() {
     const { slug } = useParams();

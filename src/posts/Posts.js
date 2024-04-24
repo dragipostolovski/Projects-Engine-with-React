@@ -3,7 +3,7 @@ import { Search } from "../Search";
 import { Post } from "./Post";
 
 
-const API_URL = `${process.env.WEBSITE}wp-json/wp/v2/posts/`;
+const API_URL = `${process.env.REACT_APP_WEBSITE}wp-json/wp/v2/posts/`;
 
 export function Posts() {
     const [ find, setFind ] = useState("");
