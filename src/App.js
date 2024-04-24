@@ -12,47 +12,21 @@ import { Words } from './dictionary/Words';
 import { Lessons } from './lessons/Lessons';
 import { Movies } from './movies/Movies';
 import { Posts } from './posts/Posts';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Single } from './posts/Single';
 
 function App() {
 
   return (
-    <div className="Worklet">
-      
-      <div className='c-title'>
-        <div className='c-title__inner container'>
-          <h1>Projects Engine with React</h1>
+    <Router>
+        <div className="Worklet">
+          <Routes>
+            <Route path='/' element={<Posts />} />
+            <Route path='/:slug' element={<Single />} />
+            <Route path='/movies' element={<Movies />} />
+          </Routes>
         </div>
-      </div>
-
-      <Posts />
-
-      {/* <Movies /> */}
-
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <Courses />
-        <Input />
-        <Counter />
-        <Accordion />
-        
-        <ComponentOne name="Projects Engine"/>
-        <ComponentTwo name="Zing"/>
-        <ComponentThree />
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
+    </Router>
   );
 }
 

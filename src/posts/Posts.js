@@ -3,7 +3,7 @@ import { Search } from "../Search";
 import { Post } from "./Post";
 
 
-const API_URL = "https://projectsengine.com/wp-json/wp/v2/posts/";
+const API_URL = `${process.env.WEBSITE}wp-json/wp/v2/posts/`;
 
 export function Posts() {
     const [ find, setFind ] = useState("");
@@ -26,6 +26,12 @@ export function Posts() {
     }, [])
 
     return (
+        <>
+        <div className='c-title'>
+            <div className='c-title__inner container'>
+                <h1>Projects Engine with React</h1>
+            </div>
+        </div>
         <div className="c-grid">
             <div className="c-search container">
                 <Search find={find} setFind={setFind} label="Find post" />
@@ -39,5 +45,6 @@ export function Posts() {
                 ))}
             </div>
         </div>
+        </>
     )
 }

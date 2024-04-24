@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Movie } from "./Movie";
 import { Search } from "../Search";
 
-const API_KEY = "15eb7073d6c31c939e3bf5eb934a0d19";
+const API_KEY = process.env.API_KEY;
 const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&include_adult=false&include_video=true&language=en-US&page=1&sort_by=popularity.desc`;
 
 export function Movies () {
