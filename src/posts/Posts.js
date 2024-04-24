@@ -15,17 +15,15 @@ export function Posts() {
             const response = await res.json();
 
             setPosts(response);
-
-            console.log(response);
         } catch (e) {
-            console.error(e);
+            // console.error(e);
         }
     }
 
 
     useEffect( () => {
         getPosts()
-    })
+    }, [])
 
     return (
         <div className="c-grid">

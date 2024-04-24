@@ -20,7 +20,7 @@ function App() {
       
       <div className='c-title'>
         <div className='c-title__inner container'>
-          <h1>Worklet</h1>
+          <h1>Projects Engine with React</h1>
         </div>
       </div>
 
