@@ -2,21 +2,21 @@ import { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
+const API_URL = `${process.env.REACT_APP_WEBSITE}wp-json/wp/v2/media/`;
 
 export function Post( post ) {
     const [ image, setImage ] = useState("https://projectsengine.com/wp-content/themes/zing/src/img/placeholder.jpg");
 
     const getMedia = async () => {
         try {
-            const res = await fetch(`${process.env.WEBSITE}wp-json/wp/v2/media/` + post.post.featured_media);
+            const res = await fetch(API_URL + post.post.featured_media);
     
             if( res.ok ) {
                 const response = await res.json();
-
                 setImage( response.guid.rendered );
             }
         } catch (e) {
-            // console.error(e);
+            console.error(e);
         }
     }
 
