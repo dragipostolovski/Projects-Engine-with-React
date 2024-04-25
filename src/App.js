@@ -13,17 +13,25 @@ import { Lessons } from './lessons/Lessons';
 import { Movies } from './movies/Movies';
 import { Posts } from './posts/Posts';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from "./Elements";
 import { Single } from './posts/Single';
+import "./App.css";
+import Menu from "./Menu";
+import { Cards } from "./Cards";
 
 function App() {
 
   return (
     <Router>
         <div className="Worklet">
+          <Header>
+            <Menu />
+          </Header>
           <Routes>
             <Route path='/' element={<Posts />} />
             <Route path='/:slug' element={<Single />} />
             <Route path='/movies' element={<Movies />} />
+            <Route path='/cards' element={<Cards />} />
           </Routes>
         </div>
     </Router>
