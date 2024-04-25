@@ -40,4 +40,12 @@ export const Card = styled.div`
   img {
     width: 100%;
   }
+  p, span {
+    color: #202020;
+  }
+  span.c-number {
+    width: 35px;
+    text-align: center;
+    display: inline-block;
+  }
 `;

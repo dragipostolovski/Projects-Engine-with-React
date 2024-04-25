@@ -18,6 +18,7 @@ import { Single } from './posts/Single';
 import "./App.css";
 import Menu from "./Menu";
 import { Cards } from "./Cards";
+import Hooks from './Hooks';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
             <Route path='/:slug' element={<Single />} />
             <Route path='/movies' element={<Movies />} />
             <Route path='/cards' element={<Cards />} />
+            <Route path='/hooks' element={<Hooks />} />
           </Routes>
         </div>
     </Router>
