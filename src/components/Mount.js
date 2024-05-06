@@ -1,5 +1,4 @@
-import { useMount, useUnmount } from "../hooks/useMount";
-import { useToggle } from "../hooks/useToggle";
+import { useMount, useUnmount, useToggle } from "../hooks/index";
 
 export const Mount = () => {
     const { isToggled, toggle } = useToggle(false);

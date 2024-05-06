@@ -19,22 +19,31 @@ import "./App.css";
 import Menu from "./Menu";
 import { Cards } from "./Cards";
 import Hooks from './Hooks';
+import Inner from './components/Inner';
+import Nav from './components/Nav';
 
 function App() {
 
   return (
     <Router>
         <div className="Worklet">
-          <Header>
-            <Menu />
-          </Header>
-          <Routes>
-            <Route path='/' element={<Posts />} />
-            <Route path='/:slug' element={<Single />} />
-            <Route path='/movies' element={<Movies />} />
-            <Route path='/cards' element={<Cards />} />
-            <Route path='/hooks' element={<Hooks />} />
-          </Routes>
+
+          <Inner>
+
+            <Header>
+              <Menu />
+            </Header>
+            <Nav />
+            <Routes>
+              <Route path='/' element={<Posts />} />
+              <Route path='/:slug' element={<Single />} />
+              <Route path='/movies' element={<Movies />} />
+              <Route path='/cards' element={<Cards />} />
+              <Route path='/hooks' element={<Hooks />} />
+            </Routes>
+
+          </Inner>
+
         </div>
     </Router>
   );
