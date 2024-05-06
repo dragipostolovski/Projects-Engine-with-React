@@ -3,6 +3,7 @@ import Toggle from './components/Toggle'; // default
 import { Inc } from './components/Inc';
 import { Mount } from "./components/Mount";
 import Hover from "./components/Hover";
+import Cookie from "./components/Cookie";
 
 const Hooks = () => {
     return (
@@ -19,6 +20,9 @@ const Hooks = () => {
                 </Card>
                 <Card>
                     <Mount />
+                </Card>
+                <Card>
+                    <Cookie />
                 </Card>
             </CardGrid>
         </Container>

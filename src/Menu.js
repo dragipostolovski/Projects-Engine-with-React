@@ -1,8 +1,7 @@
-import { useContext } from 'react';
-import { AppContext } from './state/Inner';
+import { useAppState } from './state';
 
 const Menu = () => {
-    const { toggleMenu } = useContext(AppContext)
+    const { toggleMenu } = useAppState()
 
 
     return (

@@ -1,11 +1,11 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 import { useToggle } from "../hooks/index";
 
 export const AppContext = createContext ( {
     isMenuOpen: false
 })
 
-const Inner = ({children}) => {
+export const Inner = ({children}) => {
     const { isToggled, toggle} = useToggle(false)
 
     return (
@@ -18,4 +18,4 @@ const Inner = ({children}) => {
     )
 }
 
-export default Inner;
+export const useAppState = () => useContext(AppContext);

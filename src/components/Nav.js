@@ -1,8 +1,7 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../state/Inner'
+import { useAppState } from '../state'
 
 export default function Nav() {
-     const { isMenuOpen, toggleMenu } = useContext(AppContext);
+     const { isMenuOpen, toggleMenu } = useAppState();
 
      if( !isMenuOpen) return null;
    

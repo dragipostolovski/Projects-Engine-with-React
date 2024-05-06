@@ -19,7 +19,7 @@ import "./App.css";
 import Menu from "./Menu";
 import { Cards } from "./Cards";
 import Hooks from './Hooks';
-import Inner from './state/Inner';
+import {Inner} from './state';
 import Nav from './components/Nav';
 
 function App() {
@@ -27,9 +27,7 @@ function App() {
   return (
     <Router>
         <div className="Worklet">
-
           <Inner>
-
             <Header>
               <Menu />
             </Header>
@@ -41,9 +39,7 @@ function App() {
               <Route path='/cards' element={<Cards />} />
               <Route path='/hooks' element={<Hooks />} />
             </Routes>
-
           </Inner>
-
         </div>
     </Router>
   );
