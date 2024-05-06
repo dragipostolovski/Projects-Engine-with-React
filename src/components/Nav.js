@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { AppContext } from './Inner'
+import { AppContext } from '../state/Inner'
 
 export default function Nav() {
      const { isMenuOpen, toggleMenu } = useContext(AppContext);

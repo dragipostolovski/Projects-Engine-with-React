@@ -19,7 +19,7 @@ import "./App.css";
 import Menu from "./Menu";
 import { Cards } from "./Cards";
 import Hooks from './Hooks';
-import Inner from './components/Inner';
+import Inner from './state/Inner';
 import Nav from './components/Nav';
 
 function App() {

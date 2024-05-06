@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { AppContext } from './components/Inner';
+import { AppContext } from './state/Inner';
 
 const Menu = () => {
     const { toggleMenu } = useContext(AppContext)
